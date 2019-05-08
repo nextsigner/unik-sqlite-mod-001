@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0
+import "../../.."
 
 Item {
     id:r
@@ -22,10 +23,10 @@ Item {
             color: app.c2
             horizontalAlignment: Text.AlignHCenter
         }
-        Button{
+        BotonUX{
             id:botCom
             text:'<b>Comenzar</b>'
-            font.pixelSize: app.fs
+            fs: app.fs*0.75
             onClicked: r.parent.a<r.parent.cantA?r.parent.a++:0
             Keys.onReturnPressed: r.parent.a=1
             anchors.right: parent.right

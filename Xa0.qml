@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0
 import Qt.labs.settings 1.0
+import "../../.."
 
 Item {
     id:r
@@ -54,10 +55,10 @@ Item {
                 }
             }
         }
-        Button{
+        BotonUX{
             id:botSiguiente
             text:'<b>Siguiente</b>'
-            font.pixelSize: app.fs
+            fs: app.fs*0.75
             onClicked: r.parent.a<r.parent.cantA?r.parent.a++:0
             Keys.onReturnPressed: r.parent.a<r.parent.cantA?r.parent.a++:0
             anchors.right: parent.right

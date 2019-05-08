@@ -3,6 +3,7 @@ import QtQuick.Controls 2.0
 import QtQuick.Dialogs 1.0
 import Qt.labs.settings 1.0
 import QtQuick.Window 2.0
+import "../../.."
 
 Item {
     id:r
@@ -169,10 +170,10 @@ Item {
                 border.width: 2
                 border.color: app.c2
             }
-            Button{
+            BotonUX{
                 id:botColor
                 text:'<b>Seleccionar Color</b>'
-                font.pixelSize: app.fs
+                fs: app.fs*0.75
                 onClicked: getColor()
                 Keys.onReturnPressed: getColor()
                 KeyNavigation.tab: botSiguiente
@@ -200,10 +201,10 @@ Item {
                 border.width: 2
                 border.color: app.c2
             }
-            Button{
+            BotonUX{
                 id:botColorLetra
                 text:'<b>Seleccionar Color</b>'
-                font.pixelSize: app.fs
+                fs: app.fs*0.75
                 onClicked: getColor()
                 Keys.onReturnPressed: getColor()
                 KeyNavigation.tab: botSiguiente
@@ -218,18 +219,18 @@ Item {
         Row{
             spacing: app.fs*0.5
             anchors.right: parent.right
-            Button{
+            BotonUX{
                 id:botAtras
                 text:'<b>Atras</b>'
-                font.pixelSize: app.fs
+                fs: app.fs*0.75
                 onClicked: r.parent.a--
                 Keys.onReturnPressed: r.parent.a--
                 KeyNavigation.tab: botSiguiente
             }
-            Button{
+            BotonUX{
                 id:botSiguiente
                 text:'<b>Siguiente</b>'
-                font.pixelSize: app.fs
+                fs: app.fs*0.75
                 onClicked: r.parent.a++
                 Keys.onReturnPressed: r.parent.a++
                 enabled: tiAnVent.v&&tiAlVent.v

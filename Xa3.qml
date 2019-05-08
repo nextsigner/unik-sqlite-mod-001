@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0
 import Qt.labs.settings 1.0
-
+import "../../.."
 Item {
     id:r
     anchors.fill: parent
@@ -73,18 +73,18 @@ Item {
             Row{
                 spacing: app.fs*0.5
                 anchors.right: parent.right
-                Button{
+                BotonUX{
                     id:botAtras
                     text:'<b>Atras</b>'
-                    font.pixelSize: app.fs
+                    fs: app.fs*0.75
                     onClicked: r.parent.a--
                     Keys.onReturnPressed: r.parent.a--
                     KeyNavigation.tab: botSiguiente
                 }
-                Button{
+                BotonUX{
                     id:botSiguiente
                     text:'<b>Siguiente</b>'
-                    font.pixelSize: app.fs
+                    fs: app.fs*0.75
                     onClicked: next()
                     Keys.onReturnPressed: next()
                 }
